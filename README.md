@@ -1,2 +1,2 @@
-graphdat-plugin-diskuse_summary
-===============================
+plugin-diskuse_summary
+======================
