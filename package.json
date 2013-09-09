@@ -1,0 +1,11 @@
+{
+	"name": "diskuse_summary.graphdat.plugin",
+	"version": "0.0.1",
+	"title": "Disk Use Summary plugin for Graphat",
+	"main": "index.js",
+	"private": true,
+	"dependencies": {
+		"diskspace" : "0.1.5"
+	},
+	"engine": "node >= 0.8.1"
+}
