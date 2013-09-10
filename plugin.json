@@ -1,3 +1,15 @@
 {
-	"command" : "node index.js $(pollInterval) $(devices)"
+	"description" : "Scans the given device mount paths and reports the one with the least free space",
+	"icon" : "icon.png",
+	"command" : "node index.js $(pollInterval) $(devices)",
+	"metrics" : ["DISKUSE_SUMMARY"],
+	"paramSchema" : {
+		"devices" : {
+			"description" : "The set of device mountings to check for free space.",
+			"type" : "array",
+			"items" : {
+				"type" : "string"
+			}
+		}
+	}
 }
