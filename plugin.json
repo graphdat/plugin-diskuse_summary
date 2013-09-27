@@ -3,13 +3,15 @@
 	"icon" : "icon.png",
 	"command" : "node index.js $(pollInterval) $(devices)",
 	"metrics" : ["DISKUSE_SUMMARY"],
-	"paramSchema" : {
-		"devices" : {
+	"paramSchema" : [
+		{
+			"title" : "Devices",
 			"description" : "The set of device mountings to check for free space.",
 			"type" : "array",
 			"items" : {
 				"type" : "string"
 			}
 		}
-	}
+	]
+
 }
