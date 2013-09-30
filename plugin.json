@@ -2,6 +2,7 @@
 	"description" : "Scans the given device mount paths and reports the one with the least free space",
 	"icon" : "icon.png",
 	"command" : "node index.js $(pollInterval) $(devices)",
+	"postExtract" : "npm install",
 	"metrics" : ["DISKUSE_SUMMARY"],
 	"paramSchema" : [
 		{
