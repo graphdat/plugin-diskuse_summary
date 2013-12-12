@@ -1,11 +1,28 @@
 {
-	"name": "diskuse_summary.graphdat.plugin",
+	"name": "graphdat-diskuse_summary",
 	"version": "0.0.1",
-	"title": "Disk Use Summary plugin for Graphat",
+	"private": false,
+	"description": "Disk Use Summary plugin for Graphat",
 	"main": "index.js",
-	"private": true,
+	"devDependencies": {},
 	"dependencies": {
-		"diskspace" : "0.1.5"
+		"diskspace" : "0.1.5",
+		"graphdat-plugin-tools" : "0.0.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/graphdat/plugin-diskuse_summary"
+	},
+	"keywords": [
+		"graphdat",
+		"plugin",
+		"diskusage",
+		"diskspace"
+	],
+	"author": "Graphdat <support@graphdat.com>",
+	"license": "Apache v2",
+	"bugs": {
+		"url": "https://github.com/graphdat/plugin-diskuse_summary/issues"
 	},
 	"engine": "node >= 0.8.1"
 }
