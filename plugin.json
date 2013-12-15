@@ -8,7 +8,7 @@
 	"paramSchema" : [
 		{
 			"title" : "Devices",
-			"description" : "The set of device mountings to check for free space.",
+			"description" : "The set of device mountings to check for free space. On Linux you use the mount path (ex. /). On Windows you use the drive letter (ex. C)",
 			"type" : "array",
 			"items" : {
 				"type" : "string"
