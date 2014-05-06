@@ -5,6 +5,7 @@
 	"postExtract" : "npm install",
 	"ignore" : "node_modules",
 	"metrics" : ["DISKUSE_SUMMARY"],
+	"paramArray" : true,
 	"paramSchema" : [
 		{
 			"title" : "Devices",

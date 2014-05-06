@@ -1,6 +1,7 @@
+var _param = require('./param.json');
 var _du = require('diskspace');
 
-var pollInterval = process.argv[2];
+var pollInterval = _param.pollInterval || 3000;
 
 var c;
 var smallestDev;
