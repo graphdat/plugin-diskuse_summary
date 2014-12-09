@@ -13,6 +13,7 @@ Although per-disk / per-server graphs may be more complete this plugin aims to h
 
 ### Prerequisites
 - node version 0.8.0 or later
+- npm version 1.4.21 or later
 - **Windows Only** - [Drivespace](https://github.com/keverw/drivespace) so the plugin can collect statistics.
 
 ### Plugin Setup
