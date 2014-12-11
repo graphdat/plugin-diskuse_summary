@@ -6,7 +6,7 @@
 	"main": "index.js",
 	"devDependencies": {},
 	"dependencies": {
-		"diskspace" : "0.1.5",
+		"diskspace" : "0.1.7",
 		"graphdat-plugin-tools" : "0.0.1"
 	},
 	"repository": {
