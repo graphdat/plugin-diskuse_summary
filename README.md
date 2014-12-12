@@ -16,8 +16,16 @@ Although per-disk / per-server graphs may be more complete this plugin aims to h
 - npm version 1.4.21 or later
 
 ### Plugin Configuration Fields
-|Field Name|Description                                                                                                                                  |
-|:---------|:---------------------------------------------------------------------------------------   -------------------------------------------------|
-|Devices   |The set of device mountings to check for free space. On Linux you use the mount path (ex. /). On Windows you use the drive letter (ex. C)|
+
+|Field Name|Description                                                                                                                              |
+|:------|:----------------------------------------------------------------------------------------------------------------------------------------|
+|Devices|The set of device mountings to check for free space. On Linux you use the mount path (ex. /). On Windows you use the drive letter (ex. C)|
+
+### Metrics Collected
+
+|Metric Name     |Description                                                             |
+|:---------------|:-----------------------------------------------------------------------|
+|Disk use summary|For the configured disks, reports the highest used disk percent capacity|
+
 
 
