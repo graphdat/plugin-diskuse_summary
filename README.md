@@ -19,6 +19,8 @@ The most used disk will be reported as the measurement. Although per-disk / per-
 
 ### Plugin Setup
 
+None
+
 #### Plugin Configuration Fields
 
 |Field Name|Description                                      |
