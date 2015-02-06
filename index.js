@@ -9,18 +9,22 @@ var smallest;
 
 function checkFnc(dev)
 {
-	return function(total, free, status)
+	return function(error, total, free, status)
 	{
-		var perc = 1.0 - (free / total);
-		if (!smallest || smallest <  perc)
-		{
-			smallest = perc;
-			smallestDev = dev;
-		}
+		if (!error) {
+			var perc = 1.0 - (free / total);
+			if (!smallest || smallest <  perc)
+			{
+				smallest = perc;
+				smallestDev = dev;
+			}
 
-		if (!--c)
-		{
-			console.log('DISKUSE_SUMMARY %d', smallest);
+			if (!--c)
+			{
+				console.log('DISKUSE_SUMMARY %d', smallest);
+			}
+		} else {
+			--c;
 		}
 	}
 }
