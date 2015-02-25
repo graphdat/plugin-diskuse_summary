@@ -1,4 +1,4 @@
 {
-	"devices" : "/",
+	"devices" : [ "/", "/Volumes/Charles Proxy v3.9.3" ],
 	"pollInterval" : 1000
 }
