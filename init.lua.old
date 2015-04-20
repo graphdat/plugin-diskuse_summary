@@ -1,14 +1,24 @@
+local framework = require('framework.lua')
+local http = require('http')
+local json = require('json')
+local Plugin = framework.Plugin
+local TcpPlugin = framework.TcpPlugin
+require('fun')()
+local string = require('string')
+local table = require('table')
+
 local os = require 'os'
+local los = require 'los'
 local boundary = require 'boundary'
 local io = require 'io'
 local timer = require 'timer'
 local _ = require 'underscore'
 
-local param = boundary.param
+local params = framework.boundary.param
 
 
 local function check_device(device)
-  local command = "df -k '"..device:gsub("'", "'\\''").."'"
+  local command = los.type == "win32" and "" or "df -k '"..device:gsub("'", "'\\''").."'"
 
   local df = io.popen(command)
   local result = df:read("*a")

@@ -1,4 +1,17 @@
 {
-	"devices" : [ "/", "/Volumes/Charles Proxy v3.9.3" ],
-	"pollInterval" : 1000
+   "items": [
+      {
+         "diskname" : "root",
+         "dir": "/",
+         "device" : "/dev/disk1",
+         "pollInterval": "5"
+      },
+      {
+         "diskname" : "root",
+         "dir": "/tmp",
+         "device" : "/dev/devfs",
+         "pollInterval": "5"
+      }
+   ],
+   "pollInterval": 1000
 }

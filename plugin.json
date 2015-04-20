@@ -7,16 +7,28 @@
     "postExtract_lua" : "",
     "ignore" : "node_modules",
     "metrics" : ["DISKUSE_SUMMARY"],
-    "paramArray" : true,
+    "paramArray" : { "itemTitle" : ["source"], "schemaTitle" : "Endpoint"},
     "paramSchema" : [
-    	{
-	    "title" : "Devices",
-	    "description" : "The set of device mountings to check for free space. On Linux you use the mount path (ex. /). On Windows you use the drive letter (ex. C)",
-	    "type" : "array",
-	    "items" : {
-		"type" : "string"
-	    },
+	{
+	    "title" : "Disk Name",
+	    "name" : "diskname",
+	    "description" : "The name of the disk to be appended to the hostname to display in the legend for the Disk Use Summary data.",
+	    "type" : "string"
 	    "required" : "true"
+	},
+    	{
+	    "title" : "Mount Point",
+            "name" : "dir"
+	    "description" : "The mounted point to check for free space. (either this or the Mounted device need to be set for the plugin to function properly)",
+	    "type" : "string",
+	    "required" : "false"
+	},
+    	{
+	    "title" : "Device",
+            "name" : "device",
+	    "description" : "The mounted device to check for free space. (either this or the Mount Point directory need to be set for the plugin to function properly)",
+	    "type" : "string",
+	    "required" : "false"
 	},
 	{
 	    "title" : "pollInterval",
@@ -26,11 +38,5 @@
 	    "type" : "integer",
 	    "required" : "false"
 	},
-	{
-	    "title" : "Source",
-	    "name" : "source",
-	    "description" : "The Source to display in the legend for the CPU Core data.  It will default to the hostname of the server",
-	    "type" : "string"
-	}
     ]
 }
