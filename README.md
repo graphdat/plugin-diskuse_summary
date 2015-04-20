@@ -2,14 +2,21 @@ Boundary Disk Use Summary Plugin
 --------------------------------
 
 This plugin scans one or more devices/drives for available disk space as a percentage.
-The most used disk will be reported as the measurement. Although per-disk / per-server graphs may be more complete this plugin aims to help target potential problems as concisely as possible.
 
-### Prerequisites
+## Prerequisites
+
+### Supported OS
 
 |     OS    | Linux | Windows | SmartOS | OS X |
 |:----------|:-----:|:-------:|:-------:|:----:|
 | Supported |   v   |    v    |    v    |  v   |
 
+#### Boundary Meter Versions V4.0 or later
+
+- To install new meter go to Settings->Installation or [see instructons|https://help.boundary.com/hc/en-us/sections/200634331-Installation]. 
+- To upgrade the meter to the latest version - [see instructons|https://help.boundary.com/hc/en-us/articles/201573102-Upgrading-the-Boundary-Meter].
+
+#### For Boundary Meter less than V4.0
 
 |  Runtime | node.js | Python | Java |
 |:---------|:-------:|:------:|:----:|
@@ -23,8 +30,17 @@ None
 
 #### Plugin Configuration Fields
 
-|Field Name|Description                                      |
-|:---------|:------------------------------------------------|
-|Devices   |The set of device mountings to check for free space. On Linux you use the mount path (ex. /). On Windows you use the drive letter (ex. C)|
+|Field Name|Description                                       |
+|:----------|:------------------------------------------------|
+|Disk Name  |The name of the disk to be appended to the hostname to display in the legend for the Disk Use Summary data."|
+|Mount Point|The mounted point to check for free space. (either this or the Mounted device need to be set for the plugin to function properly)|
+|Device     |The mounted device to check for free space. (either this or the Mount Point directory need to be set for the plugin to function properly)|
 
+### Metrics Collected
+
+#### For All Versions
+
+|Metric Name       |Description               |
+|:-----------------|:-------------------------|
+|Disk Use Summary  |The percentage of disk used for the given mounted disk|
 
