@@ -13,5 +13,5 @@
          "pollInterval": "5"
       }
    ],
-   "pollInterval": 1000
+   "pollInterval": 3000
 }
