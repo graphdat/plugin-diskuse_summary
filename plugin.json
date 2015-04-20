@@ -29,14 +29,6 @@
 	    "description" : "The mounted device to check for free space. (either this or the Mount Point directory need to be set for the plugin to function properly)",
 	    "type" : "string",
 	    "required" : "false"
-	},
-	{
-	    "title" : "pollInterval",
-	    "description" : "The interval on which to poll the system for disk usage. [Default: 3000]",
-	    "type" : "integer",
-	    "default" : 3000,
-	    "type" : "integer",
-	    "required" : "false"
-	},
+	}
     ]
 }

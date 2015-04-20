@@ -3,14 +3,12 @@
       {
          "diskname" : "root",
          "dir": "/",
-         "device" : "/dev/disk1",
-         "pollInterval": "5"
+         "device" : "/dev/disk1"
       },
       {
          "diskname" : "root",
          "dir": "/tmp",
-         "device" : "/dev/devfs",
-         "pollInterval": "5"
+         "device" : "/dev/devfs"
       }
    ],
    "pollInterval": 3000
