@@ -75,4 +75,4 @@ function meterPlugin:onParseValues(data)
 
 end
 
-meterPlugin:poll()
+meterPlugin:run()
