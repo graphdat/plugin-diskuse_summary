@@ -46,25 +46,25 @@ framework.util = {}
 framework.http = {}
 
 
-local ffi = require('ffi')
+--local ffi = require('ffi')
 
 -- Added some missing function in the luvit > 2.0 release
 
-ffi.cdef [[
-  int gethostname(char *name, unsigned int namelen);
-  ]]
+--ffi.cdef [[
+  --int gethostname(char *name, unsigned int namelen);
+  --]]
 
 --[[
   Return the hostname
   @param maxlen{integer,optional} defaults to 255
 --]]
-function os.hostname (maxlen)
-  maxlen = maxlen or 255
-  local buf = ffi.new("uint8_t[?]", maxlen)
-  local res = ffi.C.gethostname(buf, maxlen)
-  assert(res == 0)
-  return ffi.string(buf)
-end
+--function os.hostname (maxlen)
+  --maxlen = maxlen or 255
+  --local buf = ffi.new("uint8_t[?]", maxlen)
+  --local res = ffi.C.gethostname(buf, maxlen)
+  --assert(res == 0)
+  --return ffi.string(buf)
+--end
 
 local encode_alphabet = {
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',

@@ -1,4 +1,4 @@
-local json = require('_json.lua')
+local json = require('json')
 local framework = require('framework.lua')
 framework.table()
 framework.util()
@@ -26,14 +26,10 @@ end
 
 local meterPlugin = Plugin:new(params, meterDataSource)
 
-function parse(data)
-	return json:decode(data)
-end
-
 function meterPlugin:onParseValues(data)
 	
 	local result = {}
-	local parsed = parse(data)
+	local parsed = json.parse(data)
         if table.getn(parsed.result.query_metric) > 0 then
 		for i = 1, table.getn(parsed.result.query_metric), 3 do
 			if parsed.result.query_metric[i] ~= 'system.fs.use_percent.total' then
