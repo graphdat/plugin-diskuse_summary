@@ -1,4 +1,15 @@
 {
-	"devices" : "/",
-	"pollInterval" : 1000
+   "items": [
+      {
+         "diskname" : "root",
+         "dir": "/",
+         "device" : "/dev/disk1"
+      },
+      {
+         "diskname" : "root",
+         "dir": "/tmp",
+         "device" : "/dev/devfs"
+      }
+   ],
+   "pollInterval": 3000
 }
