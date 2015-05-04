@@ -34,30 +34,30 @@ function meterPlugin:onParseValues(data)
       if parsed.result.query_metric[i] ~= 'system.fs.use_percent.total' then
         local dirname = stringutil.urldecode(string.sub(parsed.result.query_metric[i], string.find(parsed.result.query_metric[i], "dir=")+4, string.find(parsed.result.query_metric[i], "&")-1))
         local devname = stringutil.urldecode(string.sub(parsed.result.query_metric[i], string.find(parsed.result.query_metric[i], "dev=")+4, -1))
-        local sourcename=meterPlugin.source.."."
+        local sourcename=meterPlugin.source .. "."
         local metric = {}
         local capture_metric = 0
 
         for _, item in ipairs(items) do
           if item.dir  then
-            if (item.dir == dirname) then
+            if string.find(dirname, item.dir) then
               if item.device then
-                if (item.device == devname) then
+                if string.find(devname, item.device) then
                   capture_metric = 1
-                  sourcename = sourcename..(item.diskname or dirname.."."..devname)
+                  sourcename = sourcename .. (item.diskname or (dirname .. "." .. devname))
                 end
               else
                 capture_metric = 1
-                sourcename = sourcename..(item.diskname or dirname.."."..devname)
+                sourcename = sourcename .. (item.diskname or (dirname .. "." .. devname))
               end
             end
-          elseif item.device and (item.device == devname) then
+          elseif item.device and string.find(devname, item.device) then
             capture_metric = 1
-            sourcename = sourcename..(item.diskname or dirname.."."..devname)
+            sourcename = sourcename .. (item.diskname or (dirname .. "." .. devname))
           end
         end
         if capture_metric == 1 then
-          local metric = "PERCENT_DISKUSE"
+          local metric = "DISKUSE_SUMMARY"
           local value = {}
           value['source'] = '"'..sourcename..'"'
           value['value'] = parsed.result.query_metric[i+1]
