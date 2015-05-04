@@ -20,7 +20,7 @@ items = params.items or items
 local meterDataSource = NetDataSource:new('127.0.0.1', '9192')
 
 function meterDataSource:onFetch(socket)
-  socket:write('{"jsonrpc":"2.0","method":"query_metric","id":1,"params":{"match":"system.fs.use_percent*"}}\n')
+  socket:write('{"jsonrpc":"2.0","method":"query_metric","id":1,"params":{"match":"system.fs.use_percent"}}\n')
 end
 
 local meterPlugin = Plugin:new(params, meterDataSource)
@@ -29,7 +29,7 @@ function meterPlugin:onParseValues(data)
   
   local result = {}
   local parsed = json.parse(data)
-        if table.getn(parsed.result.query_metric) > 0 then
+  if table.getn(parsed.result.query_metric) > 0 then
     for i = 1, table.getn(parsed.result.query_metric), 3 do
       if parsed.result.query_metric[i] ~= 'system.fs.use_percent.total' then
         local dirname = stringutil.urldecode(string.sub(parsed.result.query_metric[i], string.find(parsed.result.query_metric[i], "dir=")+4, string.find(parsed.result.query_metric[i], "&")-1))

@@ -6,7 +6,11 @@
          "device" : "/dev/disk1"
       },
       {
-         "diskname" : "root",
+         "diskname" : "CDrive",
+         "device" : "C:"
+      },
+      {
+         "diskname" : "tmp",
          "dir": "/tmp",
          "device" : "/dev/devfs"
       }
