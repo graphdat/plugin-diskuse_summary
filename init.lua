@@ -11,7 +11,7 @@ local net = require('net')
 
 local items = {}
 
-local params = framework.boundary.param
+local params = framework.params
 params.name = 'Boundary Disk Use Summary'
 params.version = '2.0'
 
@@ -61,6 +61,7 @@ function meterPlugin:onParseValues(data)
           local value = {}
           value['source'] = string.gsub(sourcename, "([!@#$%%^&*() {}<>/\\|]", "-")
           value['value'] = parsed.result.query_metric[i+1]
+          value['timestamp'] = parsed.result.query_metric[i+2]
           result[metric] = value
         end
       end
