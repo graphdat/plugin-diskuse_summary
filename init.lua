@@ -59,7 +59,7 @@ function meterPlugin:onParseValues(data)
         if capture_metric == 1 then
           local metric = "DISKUSE_SUMMARY"
           local value = {}
-          value['source'] = '"'..sourcename..'"'
+          value['source'] = string.gsub(sourcename, "([!@#$%%^&*() {}<>/\\|]", "-")
           value['value'] = parsed.result.query_metric[i+1]
           result[metric] = value
         end
