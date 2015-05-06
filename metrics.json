@@ -1,0 +1,10 @@
+{
+  "DISKUSE_SUMMARY": {
+    "defaultAggregate": "MAX",
+    "defaultResolutionMS": 1000,
+    "description": "For the configured disks, reports the highest used disk percent capacity",
+    "displayName": "Disk use summary",
+    "displayNameShort": "Disk use",
+    "unit": "percent"
+  }
+}
