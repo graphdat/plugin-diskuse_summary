@@ -1,5 +1,4 @@
-Boundary Disk Use Summary Plugin
---------------------------------
+# Boundary Disk Use Summary Plugin
 
 This plugin scans one or more devices/drives for available disk space as a percentage.
 
