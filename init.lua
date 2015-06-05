@@ -12,8 +12,6 @@ local net = require('net')
 local items = {}
 
 local params = framework.params
-params.name = 'Boundary Disk Use Summary'
-params.version = '2.0'
 
 items = params.items or items
 
