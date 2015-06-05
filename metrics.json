@@ -5,6 +5,7 @@
     "description": "For the configured disks, reports the highest used disk percent capacity",
     "displayName": "Disk use summary",
     "displayNameShort": "Disk use",
+    "isDisabled" : 0,
     "unit": "percent"
   }
 }
