@@ -24,14 +24,14 @@
       "name" : "dir",
       "description" : "The mounted point to check for free space. (either this or the Mounted device need to be set for the plugin to function properly)",
       "type" : "string",
-      "required" : "false"
+      "required" : false
     },
     {
       "title" : "Device",
       "name" : "device",
       "description" : "The mounted device to check for free space. (either this or the Mount Point directory need to be set for the plugin to function properly)",
       "type" : "string",
-      "required" : "false"
+      "required" : false
     }
   ]
 }
