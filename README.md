@@ -27,7 +27,7 @@ This plugin scans one or more devices/drives for available disk space as a perce
 
 None
 
-#### Plugin Configuration Fields
+### Plugin Configuration Fields
 
 |Field Name|Description                                       |
 |:----------|:------------------------------------------------|
